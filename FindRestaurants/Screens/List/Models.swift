@@ -72,6 +72,7 @@ extension CLLocationCoordinate2D: Decodable {
 }
 
 struct DetailsViewModel {
+    let name: String
     let price: String
     let isOpen: String
     let phoneNumber: String
@@ -82,10 +83,11 @@ struct DetailsViewModel {
 
 extension DetailsViewModel {
     init(details: Details) {
+        self.name = details.name
         self.price = details.price
         self.isOpen = details.isClosed ? "Closed" : "Open"
         self.phoneNumber = details.phone
-        self.rating = "\(details.rating) / 5"
+        self.rating = "\(details.rating) / 5.0"
         self.imageUrls = details.photos
         self.coordinate = details.coordinates
     }
