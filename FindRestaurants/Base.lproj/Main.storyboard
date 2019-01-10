@@ -50,7 +50,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxe-3c-c0r">
                                         <rect key="frame" x="32" y="8" width="311" height="50"/>
-                                        <color key="backgroundColor" red="0.3166009276594669" green="0.41216097481364034" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.1439521903" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="wby-vz-KSD"/>
                                         </constraints>
@@ -128,7 +128,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="i8w-iv-ERn">
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="193"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="100" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Lxq-8z-Msg">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="100" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Lxq-8z-Msg">
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="153"/>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="6qn-Jy-itK">
@@ -184,7 +184,6 @@
                                     <outlet property="makerImageView" destination="4Nn-Zs-kw3" id="bMP-iX-EE9"/>
                                     <outlet property="restaurantImageView" destination="Lxq-8z-Msg" id="dx5-ZY-X4I"/>
                                     <outlet property="restaurantNameLabel" destination="gdM-5d-aRy" id="HUX-Yx-9gZ"/>
-                                    <segue destination="ew6-Ru-EDD" kind="show" id="OVD-3N-3nY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -202,13 +201,13 @@
         <!--Title-->
         <scene sceneID="zBW-o1-gLq">
             <objects>
-                <viewController id="ew6-Ru-EDD" customClass="DetailsFoodViewController" customModule="FindRestaurants" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="ew6-Ru-EDD" customClass="DetailsFoodViewController" customModule="FindRestaurants" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iGt-CI-Ymn" customClass="DetailsFoodView" customModule="FindRestaurants" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxe-HD-dht">
-                                <rect key="frame" x="0.0" y="64" width="375" height="960"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1004"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aep-cg-xFM">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="960"/>
@@ -344,7 +343,7 @@
                                 </constraints>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LYR-F7-MWU">
-                                <rect key="frame" x="168" y="277" width="39" height="37"/>
+                                <rect key="frame" x="168" y="233" width="39" height="37"/>
                                 <color key="pageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.1439521903" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
@@ -377,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtB-nj-m8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2242" y="145"/>
+            <point key="canvasLocation" x="2502" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9XZ-cm-ZaU">
@@ -387,6 +386,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nFH-l6-KMF">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.1439521903" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="0.1439521903" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
